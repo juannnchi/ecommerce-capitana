@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+header{
+    background-color: rgb(0, 0, 0);
+}
+
+.logo {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    color: white;
+}
+
+
+.navbar__menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar__item {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.4rem;
+    border: 1px solid white;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.navbar__item:hover{
+    background-color: white;
+    color: black;
+}
+
+.navbar__subcategories{
+    display: none;
+}
+
+.nav__form{
+    width: 350px;
+}
+
+.searchbar{
+    width: 300px;
+    height: 30px;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.searchbar:focus{
+    outline: none;
+}
+
+.search__btn{
+    border: none;
+    background: none;
+}
+
+.bi-search {
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.bi-search:hover{
+    color: black;
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+.bi-cart2{
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
