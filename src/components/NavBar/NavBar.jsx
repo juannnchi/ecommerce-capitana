@@ -9,19 +9,19 @@ function NavBar() {
     <header className="header">
       <nav className="navbar">
         <ul className="navbar__menu">
-          <li className="navbar__item">Inicio</li>
-          <li className="navbar__item">Sobre Nosotros</li>
-          <li className="navbar__item">
-            Productos
+          <li className="navbar__item"><a href="#">Inicio</a></li>
+          <li className="navbar__item"><a href="#">Sobre Nosotros</a></li>
+          <li className="navbar__item categorias"><a href="#">Productos</a>
+            
             <ul className="navbar__submenu">
-              <li className="navbar__item">Todos los Productos</li>
-              <li className="navbar__item">Remeras</li>
-              <li className="navbar__item">Camperas</li>
-              <li className="navbar__item">Buzos</li>
-              <li className="navbar__item">Zapatillas</li>
+              <li className="navbar__subitem"><a href="#">Todos Los Productos</a></li>
+              <li className="navbar__subitem"><a href="#">Remeras</a></li>
+              <li className="navbar__subitem"><a href="#">Camperas</a></li>
+              <li className="navbar__subitem"><a href="#">Buzos</a></li>
+              <li className="navbar__subitem"><a href="#">Zapatillas</a></li>
             </ul>
           </li>
-          <li className="navbar__item">Contacto</li>
+          <li className="navbar__item"><a href="#">Contacto</a></li>
         </ul>
         <CartWidget />
       </nav>
@@ -31,3 +31,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
