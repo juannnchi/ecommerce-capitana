@@ -1,0 +1,24 @@
+.container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+.container p{
+    grid-column: 2;
+    text-align: center;
+    color: lightgrey;
+}
+
+.container div {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+
+.person{
+    cursor: pointer;
+}
