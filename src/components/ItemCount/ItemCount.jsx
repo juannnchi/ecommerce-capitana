@@ -4,13 +4,13 @@ function ItemCount({stock, initial, onAdd}) {
 
     const [count, setCount] = useState(initial);
 
-    const subtrack = () => {
+    const handlerClickRestar = () => {
         if(count > 1){
             setCount(count - 1)
         };
     };
 
-    const add = () => {
+    const handlerClickSumar = () => {
         if(count < stock){
             setCount(count + 1);
         };
@@ -22,10 +22,10 @@ function ItemCount({stock, initial, onAdd}) {
 
     return (
         <div>
-            <button onClick={subtrack}>-</button>
+            <button onClick={handlerClickRestar}>-</button>
             <span>{count}</span>
-            <button onClick={add}>+</button>
-            <button disabled={stock === 0} onClick={()=> onAdd(count)}>
+            <button onClick={handlerClickSumar}>+</button>
+            <button disabled={stock === 0} onClick={addToCart}>
                 <span>{stock === 0 ? 'No tenemos stock' : 'Agregar al carrito'}</span>
             </button>
         </div>

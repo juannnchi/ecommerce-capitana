@@ -1,0 +1,28 @@
+.card__container{
+    width: 300px;
+    padding: 0 10px 10px 10px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 300ms;
+}
+
+.card__container:hover{
+    border:1px solid lightgray;
+    box-shadow: 1px 1px 10px 1px;
+    border-radius: 4px;
+}
+
+.card__image{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.card__title{
+    text-transform: uppercase;
+}
+
+.card__price{
+    font-size: 20px;
+}
