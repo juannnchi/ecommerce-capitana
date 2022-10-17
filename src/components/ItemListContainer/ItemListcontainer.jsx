@@ -3,6 +3,7 @@ import Title from "../Title/Title";
 import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css"
+import { useParams } from 'react-router-dom'
 
 const productos = [
       {
@@ -94,6 +95,9 @@ const productos = [
 function ItemListContainer() {
 
     const [data, setData] = useState([]);
+    // const [loading, setLoading] = useState(true);
+
+    const {categoriaId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
@@ -101,9 +105,13 @@ function ItemListContainer() {
                 resolve(productos);
             }, 2000);
         });
-        getData.then(res => setData(res));
-
-    }, [])
+        if (categoriaId) {
+          getData.then(res => setData(res.filter(productos => productos.categoria === categoriaId)));
+        }
+        else {
+          getData.then(res => setData(res));
+        }
+    }, [categoriaId])
 
     const mensaje= 'Envios a todo el país!'
 
