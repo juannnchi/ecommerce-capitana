@@ -10,7 +10,7 @@ function NavBar() {
     <header className="header">
       <nav className="navbar">
         <ul className="navbar__menu">
-          <li className="navbar__item"><NavLink>Inicio</NavLink></li>
+          <li className="navbar__item"><NavLink to='/'>Inicio</NavLink></li>
           <li className="navbar__item"><NavLink>Sobre Nosotros</NavLink></li>
           <li className="navbar__item categorias"><NavLink>Productos</NavLink>
             

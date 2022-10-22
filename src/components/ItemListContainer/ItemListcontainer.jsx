@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Title from "../Title/Title";
-import ItemCount from "../ItemCount/ItemCount";
+// import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css"
 import { useParams } from 'react-router-dom'
+import Loader from "../Loader/Loader";
 
 const productos = [
       {
@@ -95,13 +96,14 @@ const productos = [
 function ItemListContainer() {
 
     const [data, setData] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     const {categoriaId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
-            setTimeout(() => {
+          setTimeout(() => {
+              setLoading(false)
                 resolve(productos);
             }, 2000);
         });
@@ -122,10 +124,15 @@ function ItemListContainer() {
     return (
         <>
         <Title greeting={mensaje}/>
-        <ItemCount stock={5} initial={1} onAdd={onAdd} />
+        {/* <ItemCount stock={5} initial={1} onAdd={onAdd} /> */}
+        {
+        loading ? 
+        <Loader/>
+        :
         <div className="product__list">
         <ItemList data={data}/>
         </div>
+        }
         </>
     );
 }
